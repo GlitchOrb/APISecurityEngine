@@ -1,5 +1,5 @@
 # APISecurityEngine
-> Built and Maintained by @GlitchOrb
+> @GlitchOrb
 
 An API security testing automation tool that ingests OpenAPI/GraphQL/gRPC definitions, generates automated test plans, executes them with safety controls, and produces evidence-based reports mapped to OWASP API Top 10:2023.
 
