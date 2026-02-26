@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: Example API
+  version: 1.0.0
+security:
+  - bearerAuth: []
+paths:
+  /users:
+    get:
+      operationId: listUsers
+      responses:
+        '200':
+          description: A list of users.
+    post:
+      operationId: createUser
+      responses:
+        '201':
+          description: Created
+  /users/{userId}:
+    parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      operationId: getUser
+      responses:
+        '200':
+          description: User profile.
+    delete:
+      operationId: destroyUser
+      responses:
+        '204':
+          description: Deleted
+  /public/ping:
+    get:
+      operationId: ping
+      security: []
+      responses:
+        '200':
+          description: Pong
+  /accounts/{accountId}/transfer:
+    post:
+      operationId: transferFunds
+      parameters:
+        - name: accountId
+          in: path
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Transferred
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
