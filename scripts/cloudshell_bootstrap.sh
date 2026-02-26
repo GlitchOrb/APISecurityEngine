@@ -10,7 +10,8 @@ echo "========================================="
 echo "[1/3] Setting up Python environment..."
 # Install uv using the standalone installer for fast installation
 curl -LsSf https://astral.sh/uv/install.sh | sh
-export PATH="$HOME/.cargo/bin:$PATH"
+# Add both standard cargo bin and new standalone installer local bin to PATH
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
 echo "[2/3] Syncing Project Dependencies..."
 uv sync
