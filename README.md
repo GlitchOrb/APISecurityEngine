@@ -42,13 +42,25 @@ uv run ruff format .
 
 ## CLI Usage
 
+APISecurityEngine is designed with safety first. It requires explicit flags to perform invasive tests.
+
 ```bash
 # Get help
 ase --help
 
-# Scan a target
+# Scan a target safely (Dry Run)
+# --dry-run parses the specification and looks for structural vulnerabilities 
+# but DOES NOT send any mutative traffic to the target server.
 ase scan --target https://api.example.com --dry-run
+
+# Execute full destructive tests
+# --proof-mode removes safety guards and executes real mutative payloads 
+# (e.g., Mass Assignment POSTs, DELETE requests) against the target.
+ase scan --target https://api.example.com --openapi schema.yaml --proof-mode
 ```
+
+### Try it now in your browser
+Want to see the engine in action without installing anything locally? Spin up a safe, sandboxed Cloud Shell environment with a pre-configured dangerously vulnerable mock API.
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/GlitchOrb/APISecurityEngine.git&cloudshell_tutorial=cloudshell/tutorial.md&show=ide%2Cterminal&cloudshell_workspace=.)
 
