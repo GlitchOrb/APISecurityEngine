@@ -79,6 +79,10 @@ class HtmlReporter:
             <p style="color: var(--text-secondary); margin-top: 0.5rem;">Target: <a href="{target_url}" target="_blank">{target_url}</a></p>
         </div>
         <div style="text-align: right; color: var(--text-secondary);">
+            <p style="font-weight: bold; color: var(--text-primary); margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Built & Maintained by @GlitchOrb
+            </p>
             <p>Run ID: {run_id}</p>
             <p>Duration: {duration_secs} seconds</p>
         </div>
