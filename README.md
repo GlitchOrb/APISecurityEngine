@@ -3,6 +3,11 @@
 
 An API security testing automation tool that ingests OpenAPI/GraphQL/gRPC definitions, generates automated test plans, executes them with safety controls, and produces evidence-based reports mapped to OWASP API Top 10:2023.
 
+
+<img width="1914" height="898" alt="스크린샷 2026-02-26 125214" src="https://github.com/user-attachments/assets/242d7440-da64-4902-9921-264b93e440ce" />
+
+
+
 ## Requirements
 - Python 3.12+
 - [uv](https://github.com/astral-sh/uv) (recommended) or pip
